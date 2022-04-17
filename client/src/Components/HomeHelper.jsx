@@ -8,26 +8,30 @@ const Home = () => {
     const history = useHistory()
     const store = useSelector((store) => store)
     const [name, setName] = useState("")
+
     useEffect(() => {
         if (store.student.student.student.name) {
             setName(store.student.student.student.name)
         }
     }, [store.student.student.student.name])
     const dispatch = useDispatch()
+
     useEffect(() => {
         dispatch(newerChats(store.student.student.student.name))
         dispatch(previousChats(store.student.student.student.name))
     }, [store.student.newerChats.length])
+
     const logoutHandler = () => {
         dispatch(studentLogout())
         history.push('/')
     }
+
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col">
-                    <nav className="navbar navbar-expand-lg navbar-light  bg-light">
-                        <h4 className="navbar-brand mt-1" href="">SRM</h4>
+                <div className="col p-0">
+                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+                        <h4 className="navbar-brand mt-1" href="">JSSATEN</h4>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -57,12 +61,15 @@ const Home = () => {
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/student/updatePassword"><li>UPDATE PASSWORD</li></Link></button>
                                 </li>
+                                <li className="nav-item">
+                                    <button type="button" className="btn"><Link to="/student/examResult"><li>EXAM RESULT</li></Link></button>
+                                </li>
                                
                             </ul>
                            
                         </div>
                         <div>
-                            <button style={{listStyle:"none"}} onClick={logoutHandler} type="button" className="btn"><li>LOGOUT</li></button>
+                            <button  style={{listStyle:"none"}}  onClick={logoutHandler} type="button" className="btn text-white"><li>LOGOUT</li></button>
                         </div>
                     </nav>
                 </div>

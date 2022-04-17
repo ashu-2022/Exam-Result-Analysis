@@ -1,0 +1,18 @@
+.exam-result-container{
+    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.sem-card-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sem-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

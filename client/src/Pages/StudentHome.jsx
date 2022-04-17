@@ -11,12 +11,13 @@ const Home = () => {
         <div>
             {store.student.isAuthenticated ? <>
                 <HomeHelper />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-2">
+                {/* <div className="container"> */}
+                    <div className="flex absolute-center">
+                    {/* <div className="row"> */}
+                        {/* <div className="col-md-2">
 
-                        </div>
-                        <div className="col-md-8 mt-5">
+                        </div> */}
+                        <div className="col-sm-10 pt-5">
                             <div className="row">
                                 <div className="col-md-5">
                                     <div className="card" style={{ width: "18rem" }}>
@@ -93,12 +94,12 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2">
+                        {/* <div className="col-md-2">
 
-                        </div>
+                        </div> */}
 
                     </div>
-                </div>
+                {/* </div> */}
 
             </> : (history.push('/'))}
         </div>

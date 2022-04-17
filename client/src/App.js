@@ -31,6 +31,7 @@ import ForgotPassword from './Pages/ForgotPassword'
 import Chat from './Pages/Chat'
 import RecieverUserDetails from './Pages/RecieverUserDetails'
 import StudentUpdateProfile from './Pages/StudentUpdateProfile'
+import StudentExamResult from './Components/Exam/StudentExamResult/StudentExamResult';
  
 import StudentSubjectList from './Pages/Student/StudentSubjectList'
 
@@ -114,6 +115,7 @@ function App() {
           <Route exact path="/student/attendence" component={StudentAttendencePage} />
           <Route exact path="/student/updatePassword" component={StudentUpdatePassword} />
           <Route exact path="/student/testPerformance" component={StudentTestPerformace} />
+          <Route exact path="/student/examResult" component={StudentExamResult} />
           <Route exact path="/faculty/updatePassword" component={FacultyUpdatePassword} />
           <Route exact path="/faculty/uploadMarks" component={FacultyUploadMarks} />
           <Route exact path="/faculty/updateProfile" component={FacultyUpdateProfile} />
