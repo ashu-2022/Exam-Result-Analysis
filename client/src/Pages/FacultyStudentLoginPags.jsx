@@ -94,9 +94,9 @@ const FacultyStudentLoginPags = () => {
             <div className="row" id="trail">
                 <div className="col-md-6">
                 </div>
-                <div className="col-md-6">
-                    <div className="row m-5">
-                        <div className="col-md-8 m-auto border" style={{ backgroundColor: "white", borderRadius: "1.2rem", padding: "1rem 1rem 0rem 1rem" }}>
+                <div className="col-md-6 my-auto">
+                    <div className="row m-3">
+                        <div className="col-12 col-sm-8 m-auto border" style={{ backgroundColor: "white", borderRadius: "1.2rem", padding: "1rem 1rem 0rem 1rem" }}>
                             <div>
                                 <h3 className="text-center ">FACULTY</h3>
                                 <form noValidate onSubmit={facultyFormHandler}>
@@ -104,7 +104,7 @@ const FacultyStudentLoginPags = () => {
                                         <label htmlFor="facRegId">Registration Number</label>
                                         <input onChange={(e) => setFacultyRegNum(e.target.value)} type="text" value={facultyRegNum} className={classnames('form-control', {
                                             'is-invalid': errors.registrationNumber
-                                        })}
+                                        })} placeholder="Registration Number *"
                                             id="facRegId" />
                                         {errors.registrationNumber && (
                                             <div className="invalid-feedback">{errors.registrationNumber}</div>
@@ -114,7 +114,7 @@ const FacultyStudentLoginPags = () => {
                                         <label htmlFor="passwordFacId">Password</label>
                                         <input onChange={(e) => setFacultyPassword(e.target.value)} value={facultyPassword} className={classnames("form-control", {
                                             'is-invalid': errors.password
-                                        })}
+                                        })} placeholder="Password *"
                                             type="password" id="passwordFacId" />
                                         {errors.password && (
                                             <div className="invalid-feedback">{errors.password}</div>
@@ -136,8 +136,8 @@ const FacultyStudentLoginPags = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row m-5">
-                        <div className="col-md-8 m-auto border" style={{ backgroundColor: "white", borderRadius: "1.2rem", padding: "1rem 1rem 0rem 1rem" }}>
+                    <div className="row m-3">
+                        <div className="col-12 col-sm-8  m-auto border" style={{ backgroundColor: "white", borderRadius: "1.2rem", padding: "1rem 1rem 0rem 1rem" }}>
                             <div>
                                 <h3 className="text-center">STUDENT</h3>
                                 <form noValidate onSubmit={studentFormHandler}>
@@ -145,7 +145,7 @@ const FacultyStudentLoginPags = () => {
                                         <label htmlFor="studentId">Registration Number</label>
                                         <input onChange={(e) => setStudentRegNum(e.target.value)} type="text" value={studentRegNum} className={classnames('form-control', {
                                             'is-invalid': errorsHelper.registrationNumber
-                                        })}
+                                        })} placeholder="Registration Number *"
                                             id="studentId" />
                                         {errorsHelper.registrationNumber && (
                                             <div className="invalid-feedback">{errorsHelper.registrationNumber}</div>
@@ -155,7 +155,7 @@ const FacultyStudentLoginPags = () => {
                                         <label htmlFor="passwordId">Password</label>
                                         <input onChange={(e) => setStudentPassword(e.target.value)} value={studentPassword} className={classnames("form-control", {
                                             'is-invalid': errorsHelper.password
-                                        })}
+                                        })} placeholder="Password *"
                                             type="password" id="passwordId" />
                                         {errorsHelper.password && (
                                             <div className="invalid-feedback">{errorsHelper.password}</div>
