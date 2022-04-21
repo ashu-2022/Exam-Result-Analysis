@@ -74,6 +74,8 @@ app.use((error, req, res, next) => {
 const PORT = process.env.PORT || 8000;
 
 mongoose.connect(process.env.MONGO_URL.replace("<password>", process.env.MONGO_PASSWORD)
+// mongoose.connect(process.env.MONGO_URL.replace("<password>", process.env.MONGODB)
+
 , { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true }).then(() => {
     _response.database = "Healthy"
     console.log("Database Connected")
