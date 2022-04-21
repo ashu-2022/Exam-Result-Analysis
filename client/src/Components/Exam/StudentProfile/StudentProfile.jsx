@@ -1,6 +1,7 @@
 import React from 'react'
 import './StudentProfile.css';
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 import ProfileIcon from '../../../Style/Images/profile.png';
 import CircularScore from '../CircularScore/CircularScore';
@@ -28,7 +29,7 @@ const StudentProfile = (props) => {
         <Card.Body>
           <CircularScore score={89} grade='A'/>
           <div className='text-center'>
-            <button className='btn btn-info text-white'> View Overall Result </button>
+          <Link to="/student/examResult/overall" className='btn btn-info text-white'> View Overall Result </Link>
         </div>
         </Card.Body>
         </Card>

@@ -1,0 +1,17 @@
+.bg{
+    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.flex{
+    display: flex;
+}
+
+.absolute-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col{
+    flex-direction: column;
+}

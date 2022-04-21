@@ -14,6 +14,7 @@ import { setStudentUser, studentLogout } from './redux/action/studentAction'
 
 import LoginPage from './Pages/LoginPage'
 import Home from './Pages/StudentHome'
+import GraphExamResult from './Components/Exam/GraphExamResult/GraphExamResult';
 
 
 import StudentDetails from './Pages/StudentDetails'
@@ -116,6 +117,7 @@ function App() {
           <Route exact path="/student/updatePassword" component={StudentUpdatePassword} />
           <Route exact path="/student/testPerformance" component={StudentTestPerformace} />
           <Route exact path="/student/examResult" component={StudentExamResult} />
+          <Route exact path="/student/examResult/:semester" component={GraphExamResult} />
           <Route exact path="/faculty/updatePassword" component={FacultyUpdatePassword} />
           <Route exact path="/faculty/uploadMarks" component={FacultyUploadMarks} />
           <Route exact path="/faculty/updateProfile" component={FacultyUpdateProfile} />

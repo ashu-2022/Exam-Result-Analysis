@@ -3,7 +3,11 @@
     padding: 14px 28px;
     border-radius: 16px;
     width: 250px;
-    margin:15px
+    margin:15px;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sem-title{

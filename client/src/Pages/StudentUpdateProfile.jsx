@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import './PageStyle.css';
 
 import { studentUpdate, studentLogout,newerChats, previousChats } from '../redux/action/studentAction'
 import HomeHelper from '../Components/HomeHelper'
@@ -50,7 +50,7 @@ const StudentUpdateProfile = () => {
         history.push('/')
     }
         return (
-            <div>
+            <div className='bg'>
                 {store.student.isAuthenticated ? <>
                     <HomeHelper />
                     <div className="container mt-5">
@@ -58,7 +58,7 @@ const StudentUpdateProfile = () => {
                             <div className="col-md-5 w-100 m-auto">
                                 <form onSubmit={formHandler}>
                                     <div className="form-group">
-                                        <label htmlFor="inputId">Profile Picture</label>
+                                        <label htmlFor="inputId">Profile Picture*</label>
                                         <input required className="form-control" type="file" accept=".jpg,.png,.jpeg" id="inputId" onChange={imagehandler}></input>
                                     </div>
                                     <div className="form-group">
@@ -71,22 +71,26 @@ const StudentUpdateProfile = () => {
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="numberId">Contact Number</label>
-                                        <input onChange={(e) => setContactNumber(e.target.value)} required type="number" className="form-control" id="numberId" />
+                                        <label htmlFor="numberId">Mobile Number*</label>
+                                        <input onChange={(e) => setContactNumber(e.target.value)} required type="number" className="form-control" 
+                                        placeholder='Mobile Number*' id="numberId" />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="fatherId">Father Name</label>
-                                        <input onChange={(e) => setFatherName(e.target.value)} type="text" className="form-control" id="fatherId" />
+                                        <input onChange={(e) => setFatherName(e.target.value)} type="text" className="form-control" 
+                                        placeholder='Father Name' id="fatherId" />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="fathercnId">Father Contact Number</label>
-                                        <input onChange={(e) => setFatherContactNumber(e.target.value)} type="number" className="form-control" id="fathercnId" />
+                                        <label htmlFor="fathercnId">Parent Mobile Number</label>
+                                        <input onChange={(e) => setFatherContactNumber(e.target.value)} type="number" className="form-control" 
+                                        placeholder='Parent Mobile Number' id="fathercnId" />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="aadharId">Aadhar Card Number</label>
-                                        <input onChange={(e) => setAadharCard(e.target.value)} type="number" className="form-control" id="aadharId" />
+                                        <input onChange={(e) => setAadharCard(e.target.value)} type="number" className="form-control" 
+                                        placeholder='Aadhar Card Number' id="aadharId" />
                                     </div>
-                                    <button type="submit" className="btn btn-primary">Update</button>
+                                    <button type="submit" className="btn btn-info">Update</button>
                                 </form>
                             </div>
                         </div>

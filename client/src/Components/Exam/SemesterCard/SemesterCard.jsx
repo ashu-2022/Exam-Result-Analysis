@@ -1,5 +1,7 @@
 import './SemesterCard.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 const SemesterCard = (props) => {
     // console.log("SemesterCard Props", props);
     const {sem_no, avg_perc, sub_arr, marks_arr} = props.data;
@@ -21,8 +23,8 @@ const SemesterCard = (props) => {
                 {avg_perc} %
             </div>
         </div>
-        <div className='text-center'>
-            <button className='btn btn-info text-white mt-3'> View Result </button>
+        <div className='text-center mt-3'>
+        <Link to={`/student/examResult/semester-${sem_no}`} className='btn btn-info text-white'> View Result </Link>
         </div>
     </div>
   )
