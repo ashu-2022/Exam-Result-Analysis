@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './redux/utils/setAuthToken'
@@ -24,14 +24,14 @@ import AdminAddStudent from './Pages/AdminAddStudent'
 import AdminAddFaculty from './Pages/AdminAddFaculty'
 import AdminAddSubject from './Pages/AdminAddSubject'
 import StudentAttendencePage from './Pages/StudentAttendencePage'
-import FacultyStudentLoginPags from './Pages/FacultyStudentLoginPags'
+import FacultyStudentLoginPages from './Pages/FacultyStudentLoginPages'
 import StudentUpdatePassword from './Pages/StudentUpdatePassword'
 import FacultyUpdatePassword from './Pages/FacultyUpdatePassword'
 import ForgotPassword from './Pages/ForgotPassword'
 import Chat from './Pages/Chat'
 import RecieverUserDetails from './Pages/RecieverUserDetails'
 import StudentUpdateProfile from './Pages/StudentUpdateProfile'
- 
+
 import StudentSubjectList from './Pages/Student/StudentSubjectList'
 
 import FacultyUploadMarks from './Pages/Faculty/FacultyUploadMarks'
@@ -49,11 +49,11 @@ import AdminGetAllStudent from './Pages/Admin/AdminGetAllStudents'
 import AdminGetAllSubject from './Pages/Admin/AdminGetAllSubjects'
 
 import AdminHome from './Pages/Admin/AdminHome'
- 
+
 if (window.localStorage.facultyJwtToken) {
   setAuthToken(localStorage.facultyJwtToken);
   const decoded = jwt_decode(localStorage.facultyJwtToken);
- 
+
   store.dispatch(setFacultyUser(decoded));
 
   // Check for expired token
@@ -74,7 +74,7 @@ else if (window.localStorage.studentJwtToken) {
   if (decoded.exp < currentTime) {
     store.dispatch(studentLogout());
     window.location.href = '/';
-  } 
+  }
 }
 else if (window.localStorage.adminJwtToken) {
   setAuthToken(localStorage.adminJwtToken);
@@ -87,16 +87,16 @@ else if (window.localStorage.adminJwtToken) {
   if (decoded.exp < currentTime) {
     store.dispatch(adminLogout());
     window.location.href = '/';
-  } 
+  }
 }
 
 function App() {
-  const store = useSelector((store)=>store)
+  const store = useSelector((store) => store)
   return (
-    <div>
+    <div style={{ backgroundColor: '#F0F8FF' }}>
       <Router>
         <Switch>
-          <Route exact path='/' component={FacultyStudentLoginPags} />
+          <Route exact path='/' component={FacultyStudentLoginPages} />
           <Route exact path='/adminLogin' component={LoginPage} />
           <Route exact path='/home' component={Home} />
           <Route exact path='/student/updateProfile' component={StudentUpdateProfile} />
