@@ -1,3 +1,6 @@
 #trail {
     background: url('./Images/infra19.jpg') center/cover no-repeat fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: soft-light;
 }
