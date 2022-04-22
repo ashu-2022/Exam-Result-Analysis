@@ -76,7 +76,7 @@ const AttendenceFaculty = () => {
             {store.faculty.isAuthenticated ? <>
                 <FacultyHomeHelper />
                 {store.faculty.fetchedStudentsHelper && <div className="row justify-content-center mt-4 ">
-                    <div className="col-md-4">
+                    <div className="col-md-4" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                         <form noValidate onSubmit={formHandler}>
                             <div className="form-group">
                                 <label htmlFor="branchId">Department</label>

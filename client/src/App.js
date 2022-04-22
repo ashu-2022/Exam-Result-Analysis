@@ -93,7 +93,7 @@ else if (window.localStorage.adminJwtToken) {
 function App() {
   const store = useSelector((store) => store)
   return (
-    <div style={{ backgroundColor: '#F0F8FF' }}>
+    <div className='vh-100' style={{ backgroundColor: '#F0F8FF' }}>
       <Router>
         <Switch>
           <Route exact path='/' component={FacultyStudentLoginPages} />

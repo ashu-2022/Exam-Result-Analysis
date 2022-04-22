@@ -68,7 +68,7 @@ const StudentDetails = () => {
         <div>
             {store.student.isAuthenticated ? <>
                 <HomeHelper />
-                <div className="container">
+                <div className="container" style={{ backgroundColor: 'white', padding: "1rem 2rem 2rem 2rem", boxShadow: '0 0 5px' }}>
                     {result.length === 0 && <div className="row">
                         <div className="col-md-3 border mt-4">
                             <div className="row mt-3">

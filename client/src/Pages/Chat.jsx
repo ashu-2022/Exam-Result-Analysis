@@ -100,7 +100,7 @@ const Chat = (props) => {
                 <HomeHelper />
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-md-5 m-auto">
                             <form className="form-inline" onSubmit={formHandler}>
                                 <div className="form-group ">
                                     {/* <input value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type here.." type="text" className="form-control" /> */}

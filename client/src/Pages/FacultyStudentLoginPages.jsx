@@ -91,17 +91,17 @@ const FacultyStudentLoginPages = () => {
 
     return (
 
-        <div className=" d-flex align-items-center justify-content-center" style={{ display: 'flex', }}>
+        <div className=" d-flex align-items-center justify-content-center vh-100" style={{ display: 'flex', }}>
             <div className="m-auto border" style={{ borderRadius: "1rem", boxShadow: '0 0 15px', display: 'flex' }}>
                 <div className='d-flex align-items-center justify-content-center' id='trail' style={{ borderRadius: "1rem 0rem 0rem 1rem", maxWidth: '50vh' }}>
-                    <h2 className="text-center mb-4 white-text">JSS ACADEMY OF TECHNICAL EDUCATION,NOIDA</h2>
+                    <h2 className="text-center mb-4 text-white">JSS ACADEMY OF TECHNICAL EDUCATION,NOIDA</h2>
                 </div>
-                <div className="m-auto border" style={{ borderRadius: "0rem 1rem 1rem 0rem", padding: "5rem 5rem 5rem 5rem", backgroundColor: '#F0F8FF' }}>
+                <div className="m-auto border bg-dark" style={{ borderRadius: "0rem 1rem 1rem 0rem", padding: "5rem 5rem 5rem 5rem",  }}>
                     < div >
-                        <h3 className="text-center ">FACULTY</h3>
+                        <h3 className="text-center text-white">FACULTY</h3>
                         <form noValidate onSubmit={facultyFormHandler}>
-                            <div className="form-group">
-                                <label htmlFor="facRegId">Registration Number</label>
+                            <div className="form-group text-white">
+                                <label htmlFor="facRegId text-white">Registration Number</label>
                                 <input onChange={(e) => setFacultyRegNum(e.target.value)} type="text" value={facultyRegNum} className={classnames('form-control', {
                                     'is-invalid': errors.registrationNumber
                                 })}
@@ -110,7 +110,7 @@ const FacultyStudentLoginPages = () => {
                                     <div className="invalid-feedback">{errors.registrationNumber}</div>
                                 )}
                             </div>
-                            <div className="form-group">
+                            <div className="form-group text-white">
                                 <label htmlFor="passwordFacId">Password</label>
                                 <input onChange={(e) => setFacultyPassword(e.target.value)} value={facultyPassword} className={classnames("form-control", {
                                     'is-invalid': errors.password
@@ -134,9 +134,9 @@ const FacultyStudentLoginPages = () => {
                         <p className="text-center mt-2 "><Link className="text-center" to="/forgotPassword/faculty">Forgot Password</Link></p>
                     </div>
                     <div>
-                        <h3 className="text-center">STUDENT</h3>
+                        <h3 className="text-center text-white">STUDENT</h3>
                         <form noValidate onSubmit={studentFormHandler}>
-                            <div className="form-group">
+                            <div className="form-group text-white">
                                 <label htmlFor="studentId">Registration Number</label>
                                 <input onChange={(e) => setStudentRegNum(e.target.value)} type="text" value={studentRegNum} className={classnames('form-control', {
                                     'is-invalid': errorsHelper.registrationNumber
@@ -146,7 +146,7 @@ const FacultyStudentLoginPages = () => {
                                     <div className="invalid-feedback">{errorsHelper.registrationNumber}</div>
                                 )}
                             </div>
-                            <div className="form-group">
+                            <div className="form-group text-white">
                                 <label htmlFor="passwordId">Password</label>
                                 <input onChange={(e) => setStudentPassword(e.target.value)} value={studentPassword} className={classnames("form-control", {
                                     'is-invalid': errorsHelper.password

@@ -53,7 +53,7 @@ const AdminAddSubject = () => {
                 <div className="container mt-5">
                     <div className="row justify-content-center">
                         <div className="col-md-4">
-                            <div className="d-flex justify-content-md-center vh-100">
+                            <div className="d-flex justify-content-md-center" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                                 <form noValidate onSubmit={formHandler}>
                                     <div className="form-group">
                                         <label htmlFor="snameId">Subject Name</label>

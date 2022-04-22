@@ -50,7 +50,7 @@ const FacultyUpdateProfile = () => {
                 <FacultyHomeHelper />
                 <div className="container mt-5">
                     <div className="row ">
-                        <div className="col-md-5 w-100 m-auto">
+                        <div className="col-md-5 w-100 m-auto" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                             <form onSubmit={formHandler}>
                                 <div className="form-group">
                                     <label htmlFor="inputId">Profile Picture</label>

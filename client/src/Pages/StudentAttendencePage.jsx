@@ -20,10 +20,10 @@ const Home = () => {
         <div>
             {store.student.isAuthenticated ? <>
                 <HomeHelper />
-                <div className="container">
-                    <div className="row mt-5">
-                        <div className="col-md-6 m-auto">
-                            <table className="table border">
+                <div className="container" >
+                    <div className="row mt-5" >
+                        <div className="col-md-6 m-auto" >
+                            <table className="table border" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                                 <thead>
                                     <tr>
                                         <th scope="col">S.No</th>

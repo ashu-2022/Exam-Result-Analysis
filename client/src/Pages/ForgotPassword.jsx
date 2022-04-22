@@ -59,9 +59,9 @@ const ForgotPassword = (props) => {
 
 
     return (
-        <div className="container mt-5">
+        <div className="d-flex justify-content-md-center align-items-center vh-100">
             <div className="row">
-                <div className="col-md-4 m-auto">
+                <div className="col-md-4 m-auto" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                     {!helper ? <>
                         <form noValidate onSubmit={sendOTPHandler}>
                             <div className="form-group">

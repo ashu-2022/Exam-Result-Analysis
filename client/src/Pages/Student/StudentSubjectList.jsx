@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllSubjects } from '../../redux/action/studentAction'
 import HomeHelper from '../../Components/HomeHelper'
@@ -9,16 +9,16 @@ const StudentSubjectList = () => {
     const history = useHistory()
     const dispatch = useDispatch()
     useEffect(() => {
-       dispatch(getAllSubjects())
-    },[])
+        dispatch(getAllSubjects())
+    }, [])
     return (
         <>
             {store.student.isAuthenticated ? <>
                 <HomeHelper />
-                <div className="container">
+                <div className="container" >
                     <div className="row mt-5">
-                        <div className="col-md-6 m-auto">
-                            <table className="table border">
+                        <div className="col-md-6 m-auto" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
+                            <table className="table border" >
                                 <thead>
                                     <tr>
                                         <th scope="col">S.No</th>
@@ -45,8 +45,8 @@ const StudentSubjectList = () => {
                         </div>
                     </div>
                 </div></> : (history.push('/'))}
-           
-            </>
+
+        </>
     )
 }
 

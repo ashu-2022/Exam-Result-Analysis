@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { studentLogout, newerChats, previousChats} from '../redux/action/studentAction'
+import { studentLogout, newerChats, previousChats } from '../redux/action/studentAction'
 
 
 const Home = () => {
@@ -23,11 +23,11 @@ const Home = () => {
         history.push('/')
     }
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{ padding: "1rem 1rem 1rem 1rem" }}>
             <div className="row">
                 <div className="col">
-                    <nav className="navbar navbar-expand-lg navbar-light  bg-light">
-                        <h4 className="navbar-brand mt-1" href="">SRM</h4>
+                    <nav className="navbar navbar-expand-lg bg-dark" style={{ borderRadius: "1rem", boxShadow: '0 0 10px', }}>
+                        <h3 className="navbar-brand mt-1 text-white" href="">JSSATEN</h3>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -54,15 +54,13 @@ const Home = () => {
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/studentDetails"><li>NEW CONVERSATION ({store.student.newerChats.length})</li></Link></button>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item" >
                                     <button type="button" className="btn"><Link to="/student/updatePassword"><li>UPDATE PASSWORD</li></Link></button>
                                 </li>
-                               
                             </ul>
-                           
                         </div>
                         <div>
-                            <button style={{listStyle:"none"}} onClick={logoutHandler} type="button" className="btn"><li>LOGOUT</li></button>
+                            <button style={{ listStyle: "none", color: 'white' }} onClick={logoutHandler} type="button" className="btn"><li>LOGOUT</li></button>
                         </div>
                     </nav>
                 </div>

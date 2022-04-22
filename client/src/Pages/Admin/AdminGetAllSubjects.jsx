@@ -34,7 +34,7 @@ const AdminGetAllSubjects = () => {
                     <AdminHomeHelper />
                     <div className="container">
                         <div className="row mt-5">
-                            <div className="col-md-4">
+                            <div className="col-md-5 m-auto" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                                 <form noValidate onSubmit={formHandler}>
                                     <div className="form-group">
                                         <label htmlFor="departmentId">Department</label>

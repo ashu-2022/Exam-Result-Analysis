@@ -31,9 +31,9 @@ const StudentUpdatePassword = () => {
         <div>
             {store.student.isAuthenticated ? <>
                 <HomeHelper />
-                <div className="container m-5">
+                <div className="container">
                     <div className="row m-5">
-                        <div className="col-md-5 m-auto">
+                        <div className="col-md-5 m-auto" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                             <form noValidate onSubmit={formHandler}>
                                 <div className="form-group">
                                     <label htmlFor="emailId">Old Password</label>
@@ -64,7 +64,7 @@ const StudentUpdatePassword = () => {
                     </div>
                 </div></> : (history.push('/'))}
 
-           
+
 
         </div>
     )

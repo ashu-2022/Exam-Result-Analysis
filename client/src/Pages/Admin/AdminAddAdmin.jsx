@@ -61,7 +61,7 @@ const AdminAddAdmin = () => {
             {store.admin.isAuthenticated ? (<><AdminHomeHelper />
                 <div className="container mt-5">
                     <div className="row ">
-                        <div className="col">
+                        <div className="col" style={{ backgroundColor: 'white', padding: "1rem 1rem 1rem 1rem", boxShadow: '0 0 5px' }}>
                             <form noValidate onSubmit={formHandler}>
                                 <div className="row">
                                     <div className="col-md-6">
